@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <main>
+        <h3 style="text-align: center;">Calculadora de Contagem de plaquetas</h3>
+        <br>
+        <h4>Insira os valores soliciados</h4>
+        <p>Digite o valor da Contagem de plaquetas: <input id="valor" type="number"> <br /></p>
+        <button onclick="resultado()">Resultado</button>
+
+        <h4 id="resultado">RESULTADO</h4>
+        <script>
+            function resultado() {
+                let valor = parseFloat(document.getElementById("valor").value);
+                let = resultado;
+                if (valor < 150000){
+                    resultado = "HIPERPLAQUETOSE";
+                }else if(valor >140000 && valor<440000){
+                    resultado = "Normal";
+                }else{
+                    resultado = "TROMBOCITOPENIA";
+                }
+                document.getElementById("resultado").innerHTML = ("O resultado do seu teste é: " + resultado);
+            }
+        </script>
+    </main>
+</body>
+</html>
